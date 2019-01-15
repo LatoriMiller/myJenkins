@@ -1,14 +1,24 @@
 pipeline {
-  agent any 
-  stages {
-    step('build'){
-      echo 'building'
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello, Latori'
+                sh 'pwd'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'Hello, All'
+                sh 'ls'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                ls
+                echo 'deploying'
+            }
+        }
     }
-    step('test'){
-      echo 'testing 123'
-    }
-    step('deploy'){
-      echo 'deploying'
-    }
-  }
 }
+
