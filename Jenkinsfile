@@ -1,13 +1,13 @@
-pipeline{
-  agents any 
-  stages{
-    stage('build'){
+pipeline {
+  agent any 
+  stages {
+    step('build'){
       echo 'building'
     }
-    stage('test'){
+    step('test'){
       echo 'testing 123'
     }
-    stage('deploy'){
+    step('deploy'){
       echo 'deploying'
     }
   }
